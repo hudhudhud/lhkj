@@ -1,0 +1,12 @@
+[
+  {
+    "key": "defaultAct",
+    "name": "默认展示活动",
+    "type": "act"
+  },
+  {
+    "key": "theme",
+    "name": "主题",
+    "type": "text"
+  }
+]

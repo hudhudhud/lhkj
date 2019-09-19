@@ -1,0 +1,8 @@
+[
+  {
+    "key": "banner",
+    "name": "首页Banner",
+    "type": "images",
+    "maxnum": 6
+  }
+]

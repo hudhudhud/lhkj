@@ -1,0 +1,44 @@
+[
+  {
+    "key": "banner",
+    "name": "头图",
+    "type": "image"
+  },
+  {
+    "key": "bannerUrl",
+    "name": "头图链接",
+    "type": "text"
+  },
+  {
+    "key": "headerBackground",
+    "name": "头部导航背景",
+    "type": "text"
+  },
+  {
+    "key": "removeTitle",
+    "name": "移除标题",
+    "type": "options",
+    "default": false,
+    "options": [
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ]
+  },
+  {
+    "key": "title",
+    "name": "标题",
+    "type": "text"
+  },
+  {
+    "key": "bannerList",
+    "name": "轮播Banner",
+    "type": "images",
+    "maxnum": 6
+  }
+]

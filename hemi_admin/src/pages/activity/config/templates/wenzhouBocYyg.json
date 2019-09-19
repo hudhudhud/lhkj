@@ -1,0 +1,17 @@
+[
+  {
+    "key": "bg",
+    "name": "背景",
+    "type": "image"
+  },
+  {
+    "key": "btn",
+    "name": "按钮",
+    "type": "image"
+  },
+  {
+    "key": "modal-btn",
+    "name": "弹框按钮",
+    "type": "image"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "key": "pageKey",
+    "name": "页面",
+    "type": "text"
+  },
+  {
+    "key": "url",
+    "name": "外链",
+    "type": "text"
+  },
+  {
+    "key": "theme",
+    "name": "主题",
+    "type": "text"
+  }
+]

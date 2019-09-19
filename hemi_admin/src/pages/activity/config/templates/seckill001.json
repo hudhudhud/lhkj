@@ -1,0 +1,12 @@
+[
+  {
+    "key": "banner",
+    "name": "头图",
+    "type": "image"
+  },
+  {
+    "key": "bannerUrl",
+    "name": "头图链接",
+    "type": "text"
+  }
+]

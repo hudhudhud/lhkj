@@ -1,0 +1,42 @@
+[
+  {
+    "key": "banner",
+    "name": "头图",
+    "type": "image"
+  },
+  {
+    "key": "background",
+    "name": "页面背景",
+    "type": "image"
+  },
+  {
+    "key": "pannel",
+    "name": "转盘背景",
+    "type": "image"
+  },
+  {
+    "key": "button",
+    "name": "抽奖按钮图片",
+    "type": "image"
+  },
+  {
+    "key": "prizeBackground",
+    "name": "奖品默认背景",
+    "type": "image"
+  },
+  {
+    "key": "prizeActive",
+    "name": "抽中奖品高亮背景",
+    "type": "image"
+  },
+  {
+    "key": "recordBtn",
+    "name": "中奖纪录按钮",
+    "type": "image"
+  },
+  {
+    "key": "ruleBtn",
+    "name": "活动规则按钮",
+    "type": "image"
+  }
+]

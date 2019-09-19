@@ -1,0 +1,29 @@
+[
+  {
+    "key": "banner",
+    "name": "头图",
+    "type": "image"
+  },
+  {
+    "key": "serviceTel",
+    "name": "客服热线",
+    "type": "text"
+  },
+  {
+    "key": "title",
+    "name": "标题",
+    "type": "text"
+  },
+  {
+    "key": "actArr",
+    "name": "活动组",
+    "type": "array",
+    "elementProps": [
+      {
+        "key": "actId",
+        "name": "活动Id",
+        "type": "text"
+      }
+    ]
+  }
+]

@@ -1,0 +1,153 @@
+[
+  {
+    "key": "banner",
+    "name": "头图",
+    "type": "image"
+  },
+  {
+    "key": "background",
+    "name": "页面背景",
+    "type": "image"
+  },
+  {
+    "key": "pannel",
+    "name": "转盘背景",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/e77f1397ac804cfcaa8fe6695dec950c.png"
+  },
+  {
+    "key": "button",
+    "name": "抽奖按钮图片",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/f1d0e45a447340fba1168398d40e93cd.png"
+  },
+  {
+    "key": "prizeBackground",
+    "name": "奖品默认背景",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/518a49d9e9d74adcb5b6d29a3685980a.png"
+  },
+  {
+    "key": "prizeActive",
+    "name": "抽中奖品高亮背景",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/393d358f108248e780e5f7579025dd29.png"
+  },
+  {
+    "key": "borderLight1",
+    "name": "边框灯图",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/7965271bcebe4c3489cf5b235a764409.png"
+  },
+  {
+    "key": "borderLight2",
+    "name": "边框灯图",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/427ee892958d4fbc9a76326fc563377d.png"
+  },
+  {
+    "key": "couponGroup",
+    "name": "礼券栏目列表",
+    "type": "array",
+    "default": [
+      {
+        "title": "专享神券大礼包",
+        "icon": "//static.lianhaikeji.com/images/20180824/b7ba61498b5e4ca089954bbf548f0752.png",
+        "couponList": [
+          {
+            "imgUrl": "//static.lianhaikeji.com/images/20180824/2250115320dc483f9f45483dd4da21fd.png",
+            "proName": "10元网易严选精选礼券",
+            "proDesc": "网易严选专卖店，满100可用",
+            "expire": "1个月",
+            "link": "http://m.mall.icbc.com.cn/mobile/member/couponDraw.jhtml?promotionid=201808179039977&code=5235195405843981"
+          },
+          {
+            "imgUrl": "//static.lianhaikeji.com/images/20180824/87e402bc23a2455f93e6fe85fd7dbb5f.png",
+            "proName": "20元数码类商品礼券",
+            "proDesc": "众泰数码专营店，满99可用",
+            "expire": "1个月",
+            "link": "http://m.mall.icbc.com.cn/mobile/member/couponDraw.jhtml?promotionid=201808179039979&code=8069072019856342"
+          },
+          {
+            "imgUrl": "//static.lianhaikeji.com/images/20180824/72e4b12790fd4f5f93a25011122e6314.png",
+            "proName": "50元家居类商品礼券",
+            "proDesc": "伊伊爱直营店，满499可用",
+            "expire": "1个月",
+            "link": "http://m.mall.icbc.com.cn/mobile/member/couponDraw.jhtml?promotionid=201808179039978&code=6426808046897126"
+          },
+          {
+            "imgUrl": "//static.lianhaikeji.com/images/20180824/831380a1e131451a961ae42df2375301.png",
+            "proName": "100元苏泊尔电饭煲礼券",
+            "proDesc": "苏泊尔苏汇专卖店，满359可用",
+            "expire": "1个月",
+            "link": "http://m.mall.icbc.com.cn/mobile/member/couponDraw.jhtml?promotionid=201808179039969&code=8669121608400571"
+          }
+        ]
+      },
+      {
+        "title": "信用卡客户权益专区",
+        "icon": "//static.lianhaikeji.com/images/20180824/86df6da7dd784305b2b278fc6ebdaf87.png",
+        "couponList": [
+          {
+            "imgUrl": "//static.lianhaikeji.com/images/20180824/e79d046c9e6c46e38210d502591f6f3c.png",
+            "proName": "美食6折券",
+            "proDesc": "下载e生活app可享",
+            "expire": "",
+            "link": "https://wemall.xkeshi.net/coupon?groupId=1401557769390336"
+          },
+          {
+            "imgUrl": "//static.lianhaikeji.com/images/20180824/c525569abbcc488fb79215619bbb179e.png",
+            "proName": "新客户20元话费券",
+            "proDesc": "下载e生活app可享",
+            "expire": "",
+            "link": "http://hexiao.bankbaoxian.com/icbcView/#/days?daysid=2018031401&loginParams=fE6%20iOw%2FoFoSaFtDsjp7oOGac36GXe2Yt5cSOXo0EbU6ECLQAt87OZ0WQhZyZkmTsoYizlNAAjkVPa1xlbsrX5oCZ9Lix6BY92%20RT2OgLnHwAmq1XMjcXxaDcquxMCpIxwlhKLNVWLQxrV4%20oUAVepHgLIB%2F3t9GvDJPAZZRKyY9v4gaVyAyVpnSo8oit7DCKAtX6YsZAOSviWgGWk%20QimOuZI2aFZp2RkqkWsf8iFdDOrNkGSySz3Sn1dPdCTdNRTOWnifW7ZSxfCCkKTry1VqXX0PzxPDeAXStUOr9Dxw%20iWRJcurzqYy5DimrPAHkpiPK%2FHkMFv%2FhRuqpb6OV225il4taNMc6laWMOd1tVwv52ODza6I%20zyPs1qcxyPAeMFASmtSzFCYmpJ%2FXYGPCB5fB9wHijukNgG2RtCHX5zujb4LKJY2VAWwk7ILzhsDNnuF3t0nKLundKi51vaRtIWBRwepnxEKApldt1xhZ0Tf3E%20N%2FypQP9FdMfIxp9tXtaXxggoTgtLsd030NmYOAUNhnK7Azr%20PLSWKjsz2OIQmua8%2FL0sRM8kH7lHXYf7FoXo8DqCKuTmOxFpCkhh6xNoWxbClwjXI0woCAmG6tBb1teeCdQYa3zaRJrN8kUZtfX7aEzSGGHqp0IjvzWUCfFg%3D%3D"
+          }
+        ]
+      }
+    ],
+    "elementProps": [
+      {
+        "key": "title",
+        "name": "栏目名称",
+        "type": "text"
+      },
+      {
+        "key": "icon",
+        "name": "栏目图标",
+        "type": "image"
+      },
+      {
+        "key": "couponList",
+        "name": "列表",
+        "type": "array",
+        "elementProps": [
+          {
+            "key": "imgUrl",
+            "name": "封面图片",
+            "type": "image"
+          },
+          {
+            "key": "proName",
+            "name": "礼券名称",
+            "type": "text"
+          },
+          {
+            "key": "proDesc",
+            "name": "使用说明",
+            "type": "text"
+          },
+          {
+            "key": "expire",
+            "name": "有效期",
+            "type": "text"
+          },
+          {
+            "key": "link",
+            "name": "链接",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+]

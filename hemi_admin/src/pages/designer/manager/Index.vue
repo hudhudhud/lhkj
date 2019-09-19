@@ -1,0 +1,3 @@
+<template>
+    <LayoutPage></LayoutPage>
+</template>

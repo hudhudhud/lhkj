@@ -1,0 +1,12 @@
+[
+  {
+    "key": "actId",
+    "name": "展示活动",
+    "type": "act"
+  },
+  {
+    "key": "theme",
+    "name": "主题",
+    "type": "text"
+  }
+]

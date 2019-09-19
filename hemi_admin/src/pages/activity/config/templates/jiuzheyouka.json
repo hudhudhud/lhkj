@@ -1,0 +1,11 @@
+[
+  {
+    "key": "title",
+    "name": "活动标题",
+    "type": "text"
+  },{
+    "key": "color",
+    "name": "主题颜色",
+    "type": "text"
+  }
+]

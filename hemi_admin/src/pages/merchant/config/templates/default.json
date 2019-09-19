@@ -1,0 +1,57 @@
+[
+  {
+    "key": "banner",
+    "name": "首页Banner",
+    "type": "images",
+    "maxnum": 6
+  },
+  {
+    "key": "actGroup",
+    "name": "活动栏目列表",
+    "type": "array",
+    "elementProps": [
+      {
+        "key": "groupName",
+        "name": "栏目名称",
+        "type": "text"
+      },
+      {
+        "key": "groupIcon",
+        "name": "栏目图标",
+        "type": "image"
+      },
+      {
+        "key": "actList",
+        "name": "活动列表",
+        "type": "array",
+        "elementProps": [
+          {
+            "key": "cover",
+            "name": "封面图片",
+            "type": "image"
+          },
+          {
+            "key": "size",
+            "name": "图片尺寸",
+            "type": "options",
+            "default": "50",
+            "options": [
+              { "label": "一行一个", "value": "100" },
+              { "label": "一行两个", "value": "50" }
+            ]
+          },
+          {
+            "key": "actId",
+            "name": "活动ID",
+            "type": "act"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "hottel",
+    "name": "热线电话",
+    "type": "text"
+  }
+]

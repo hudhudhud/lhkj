@@ -1,0 +1,27 @@
+[
+  {
+    "key": "background",
+    "name": "页面背景",
+    "type": "image"
+  },
+  {
+    "key": "pannel",
+    "name": "转盘背景",
+    "type": "image"
+  },
+  {
+    "key": "pointer",
+    "name": "指针图片",
+    "type": "image"
+  },
+  {
+    "key": "proImgWidth",
+    "name": "绘制奖品图片宽度",
+    "type": "text"
+  },
+  {
+    "key": "proImgHeight",
+    "name": "绘制奖品图片高度",
+    "type": "text"
+  }
+]

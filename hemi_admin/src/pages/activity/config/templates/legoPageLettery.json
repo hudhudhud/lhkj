@@ -1,0 +1,53 @@
+[
+  {
+    "key": "pageKey",
+    "name": "页面Key",
+    "type": "text"
+  },
+  {
+    "key": "banner",
+    "name": "头图",
+    "type": "image"
+  },
+  {
+    "key": "background",
+    "name": "页面背景",
+    "type": "image"
+  },
+  {
+    "key": "pannel",
+    "name": "转盘背景",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/e77f1397ac804cfcaa8fe6695dec950c.png"
+  },
+  {
+    "key": "button",
+    "name": "抽奖按钮图片",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/f1d0e45a447340fba1168398d40e93cd.png"
+  },
+  {
+    "key": "prizeBackground",
+    "name": "奖品默认背景",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/518a49d9e9d74adcb5b6d29a3685980a.png"
+  },
+  {
+    "key": "prizeActive",
+    "name": "抽中奖品高亮背景",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/393d358f108248e780e5f7579025dd29.png"
+  },
+  {
+    "key": "borderLight1",
+    "name": "边框灯图",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/7965271bcebe4c3489cf5b235a764409.png"
+  },
+  {
+    "key": "borderLight2",
+    "name": "边框灯图",
+    "type": "image",
+    "default": "//static.lianhaikeji.com/images/20180905/427ee892958d4fbc9a76326fc563377d.png"
+  }
+]
