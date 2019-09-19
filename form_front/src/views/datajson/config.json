@@ -1,0 +1,119 @@
+{
+  "status": 200,
+  "error": "",
+  "message": "success",
+  "payload": {
+    "id": 12,
+    "activityId": "12",
+    "merchantId": "12",
+    "title": "家装分期额度评测",
+    "description": "",
+    "cssStyle": "",
+    "canResubmit": false,
+    "canUpdateData": false,
+    "items": [
+      {
+        "id": 39,
+        "formId": 12,
+        "label": "手机号",
+        "dataKey": "data1",
+        "resourceKey": "age",
+        "formItemType": "FormNumber",
+        "cssStyle": "",
+        "necessary": true,
+        "verifyRegex": null,
+        "extraResourceUrl": null
+      },
+      {
+        "id": 40,
+        "formId": 12,
+        "label": "学历",
+        "dataKey": "data2",
+        "resourceKey": "education",
+        "formItemType": "FormSelect",
+        "cssStyle": "",
+        "necessary": true,
+        "verifyRegex": null,
+        "extraResourceUrl": null,
+        "options": ["中专/高中以下", "大专", "本科", "研究生硕士及以上"]
+      },
+      {
+        "id": 41,
+        "formId": 12,
+        "label": "年收入",
+        "dataKey": "data3",
+        "resourceKey": "annualIncome",
+        "formItemType": "FormSelect",
+        "cssStyle": "",
+        "necessary": true,
+        "verifyRegex": null,
+        "extraResourceUrl": null,
+        "options": [
+          "低于3万",
+          "3-5万",
+          "5-10万",
+          "10-20万",
+          "20-30万",
+          "30万以上"
+        ]
+      },
+      {
+        "id": 42,
+        "formId": 12,
+        "label": "房产情况",
+        "dataKey": "data4",
+        "resourceKey": "estateStatus",
+        "formItemType": "FormSelect",
+        "cssStyle": "",
+        "necessary": true,
+        "verifyRegex": null,
+        "extraResourceUrl": null,
+        "options": [
+          "租房",
+          "自有房产价值低于100万",
+          "自有房产价值大于100万",
+          "其他"
+        ]
+      },
+      {
+        "id": 43,
+        "formId": 12,
+        "label": "您在银行存款数",
+        "dataKey": "data5",
+        "resourceKey": "bankSavings",
+        "formItemType": "FormSelect",
+        "cssStyle": "",
+        "necessary": false,
+        "verifyRegex": null,
+        "extraResourceUrl": null,
+        "options": [
+          "5万以下",
+          "5-10万",
+          "10-20万",
+          "20-50万",
+          "50-100万",
+          "100万以上"
+        ]
+      },
+      {
+        "id": 44,
+        "formId": 12,
+        "label": "当前公司工作时长",
+        "dataKey": "data6",
+        "resourceKey": "workingYearsCurrentCompany",
+        "formItemType": "FormSelect",
+        "cssStyle": "",
+        "necessary": false,
+        "verifyRegex": null,
+        "extraResourceUrl": null,
+        "options": [
+          "少于半年",
+          "半年-一年",
+          "一年-三年",
+          "三年-五年",
+          "五年以上"
+        ]
+      }
+    ]
+  }
+}
