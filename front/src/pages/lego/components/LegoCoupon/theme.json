@@ -1,0 +1,10 @@
+{
+  "purple": {
+    "color": "#4662f3",
+    "btnBg": "http://static.lianhaikeji.com/images/20181122/37c65e82585d4d44831ba54cb2dd8d73.png"
+  },
+  "green": {
+    "color": "rgb(88, 187, 32)",
+    "btnBg": "http://static.lianhaikeji.com/images/20181123/c8ff0e87f3284059a423f6bb78635428.png"
+  }
+}

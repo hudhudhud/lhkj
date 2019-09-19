@@ -1,0 +1,525 @@
+<template>
+  <div class="lettery">
+    <div class="bg">
+      <img src="./imgs/BG.jpg" alt>
+    </div>
+    <div class="wapper">
+      <div class="btn-group">
+        <button class="my-prizes-btn" @click="showRule3 = true"></button>
+        <button
+          class="lettery-rules-btn"
+          @click="$router.push(`/${$store.state.merchantAppid}/merchant/index/order?actId=174,175`)"
+        ></button>
+        <!-- <button class="lettery-rules-btn" @click="$router.push(`/${$store.state.merchantAppid}/merchant/index/order?actId=164,165`)"></button> -->
+      </div>
+      <div class="buy">
+        <a
+          class="href-wrap"
+          href="https://web.zj.icbc.com.cn/wservice/v1/wservice/unigatePage?urlCode=gyhbsign&instId=gyhzqy&cSessionId=5e6fe0a47b3645e1aaaceff579545274&txChannel=26"
+        >
+          <img src="./imgs/buy.png" alt>
+          <div class="title">
+            <div>货币基金 1元起购</div>
+
+            <img src="./imgs/arraw.png" alt>
+          </div>
+        </a>
+      </div>
+      <div class="act-wrapper">
+        <div class="act-title">
+          <i></i>
+          <div class="txt">幸福专属服务</div>
+          <i></i>
+        </div>
+        <div class="standard-list">
+          <div class="standard-item">
+            <div class="price">
+              <b>50</b>元
+            </div>
+            <div class="name">话费代金券</div>
+            <div class="btn red-btn">立即领取</div>
+          </div>
+        </div>
+        <div class="act-title">
+          <i></i>
+          <div class="txt">幸运大转盘</div>
+          <i></i>
+
+          <!-- 大转盘 -->
+        </div>
+        <div class="lottery-rotate">
+          <HemiRotate
+            ref="myRotate"
+            v-if="showPannel"
+            :setting="setting"
+            @start="start"
+            @end="rotateEnd"
+            class="lottery-pannel"
+            :templateConfig="templateConfig"
+          ></HemiRotate>
+        </div>
+      </div>
+    </div>
+    <div class="mask" v-show="showRule">
+      <div class="msg">
+        <div class="msg-box rule1" v-show="showRule1">
+          <div class="close" @click="showRule1 = false"></div>
+          <div class="btn" @click="showRule1 = false"></div>
+        </div>
+        <div class="msg-box rule2" v-show="showRule2">
+          <div class="close" @click="showRule2 = false"></div>
+          <div class="desc">“次月翻倍专属福利”将在下月开启，
+            <br>敬请期待！
+          </div>
+          <div class="btn" @click="showRule2 = false"></div>
+        </div>
+      </div>
+      <div class="rule" v-show="showRule3">
+        <div class="close" @click="showRule3 = false"></div>
+        <div class="title">活动规则</div>
+        <div class="txt" v-html="act.detail"></div>
+      </div>
+    </div>
+    <div class="bg-wrap"></div>
+  </div>
+</template>
+
+<script>
+import { Indicator, Toast } from 'mint-ui';
+import jssdk from '@/lib/jssdk';
+import HemiRotate from '@/components/HemiRotate';
+export default {
+  props: {
+    act: {
+      type: Object,
+      require: true
+    }
+  },
+  data () {
+    return {
+      merchantId: this.$store.state.merchantId,
+      isReceive: false,
+      actId: null,
+      standardId: '',
+      templateConfig: {},
+      showRule: false,
+      showRule1: false,
+      showRule2: false,
+      showRule3: false,
+      showRule4: false,
+      actArr: [174, 545123753],
+      showPannel: false,
+      loading: false,
+      rotating: false,
+      chances: 0,
+      prizeList: [],
+      currentPrize: null,
+      setting: {
+        pannelImage: null,
+        pointerImage: null,
+        names: [], // 大转盘奖品名称
+        icons: [],
+        colors: [
+          '#FFF4D6',
+          '#FFFFFF',
+          '#FFF4D6',
+          '#FFFFFF',
+          '#FFF4D6',
+          '#FFFFFF'
+        ], // 大转盘奖品区块对应背景颜色
+        startAngle: 0, // 开始角度
+        bRotate: false // false:停止;ture:旋转
+      },
+      actGroup: []
+    };
+  },
+  components: {
+    HemiRotate
+  },
+  methods: {
+    async buyChance () {
+      Indicator.open();
+      let rs = await this.$post('/api/buy_lottery', {
+        actId: this.actId,
+        num: '1'
+      });
+      if (rs.status === 200) {
+        this.$dialog({
+          state: true,
+          content: {
+            type: 'buy-lettery-chance',
+            actualPrice: rs.payload.actualPrice,
+            actId: this.actId,
+            prepayId: rs.payload.prepayId,
+            merchantAppid: this.$store.state.merchantAppid
+          }
+        });
+      } else {
+        Toast(rs.error);
+      }
+      Indicator.close();
+    },
+    async loadAct (actId) {
+      let rs = await this.$get('api/getActDetails/' + actId);
+      if (rs.status === 200) {
+        this.actGroup.push(rs.payload);
+        console.log(this.actGroup);
+      } else {
+      }
+    },
+    buy (standard) {
+      this.$router.push(
+        `/${
+          this.$store.state.merchantAppid
+        }/merchant/index/cbbBuy001/standard/${standard.id}`
+      );
+    },
+    async loadActAll () {
+      let i = 0;
+      let arr = this.actArr;
+      for (; i < arr.length;) {
+        await this.loadAct(arr[i]);
+        i++;
+        if (i == 2) {
+          let act = this.actGroup[1];
+          let config = JSON.parse(act.templateConfig);
+          this.prizeList = act.productList;
+          act.productList.forEach(item => {
+            this.setting.names.push(item.prizeName);
+            this.setting.icons.push(item.standardImgUrl);
+          });
+          Object.assign(this.templateConfig, config);
+          this.$set(this.setting, 'pannelImage', config.pannel);
+          this.$set(this.setting, 'pointerImage', config.pointer);
+          this.showPannel = true;
+          this.actId = act.actId;
+        }
+      }
+    },
+    rotateEnd (prize) {
+      this.rotating = false;
+      // Toast('恭喜中奖:' + this.currentPrize.prizeName)
+      this.$dialog({
+        state: true,
+        content: {
+          type: 'current-prize-dialog',
+          prizeName: this.currentPrize.prizeName,
+          prizePic: this.currentPrize.standardImgUrl,
+          titlePic: 1
+        }
+      });
+    },
+    async start () {
+      if (this.loading || this.rotating) {
+        return;
+      }
+      Indicator.open();
+      let result = await this.$get('api/get_lottery_info/' + this.actId);
+      if (result.status === 200) {
+        if (result.payload.chances < 1) {
+          this.buyChance();
+          Indicator.close();
+          return;
+        }
+      }
+      this.loading = true;
+      let rs = await this.$post('api/lottery_draw', {
+        actId: this.actId
+      });
+      if (rs.status === 200) {
+        let standardId = rs.payload.standardId;
+        this.chances--;
+        this.prizeList.forEach((item, ind) => {
+          if (item.standardId === standardId) {
+            this.currentPrize = item;
+            this.rotating = true;
+            this.$refs.myRotate.rotate(ind);
+          }
+        });
+      } else {
+        Toast(rs.error);
+      }
+      this.loading = false;
+      Indicator.close();
+    }
+  },
+  created () {
+    this.loadActAll();
+  },
+  mounted () {
+    Indicator.open();
+    this.$store.commit('setIsReady', false);
+    jssdk.jssdk.init('', this.merchantId, '6', val => {
+      this.$jssdk.call('disableShare');
+      Indicator.close();
+    });
+  },
+  watch: {
+    '$store.state.isReady': function (val) {
+      if (val) {
+        this.$jssdk.call('disableShare');
+      }
+    }
+  }
+};
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+@import "@/styles/mixin.scss";
+.lottery-rotate {
+  position: absolute;
+  top: 7.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7.3rem;
+  z-index: 80;
+  overflow: visible;
+}
+.lettery {
+  position: relative;
+  .bg {
+    font-size: 0;
+    img {
+      width: 100%;
+    }
+  }
+  .wapper {
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      display: block;
+      width: 100%;
+    }
+    .btn-group {
+      width: 5.4rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+      button {
+        width: 2.5rem;
+        height: 0.84rem;
+        line-height: 0.5rem;
+        color: #fff;
+        border: none;
+      }
+      .my-prizes-btn {
+        background: url(./imgs/rule.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .lettery-rules-btn {
+        background: url(./imgs/fuli.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .buy {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0.74rem;
+      .href-wrap {
+        display: inline-block;
+      }
+      img {
+        display: inline-block;
+        width: 4.26rem;
+      }
+      .title {
+        position: absolute;
+        top: 0.18rem;
+        left: 2.55rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.1rem;
+        img {
+          width: 0.14rem;
+          height: 0.24rem;
+          margin-left: 0.2rem;
+        }
+      }
+    }
+    .act-wrapper {
+      padding-bottom: 0.2rem;
+      &:last-child {
+        margin-bottom: 0.14rem;
+      }
+    }
+    .act-title {
+      display: flex;
+      justify-content: center;
+      color: rgb(164, 115, 31);
+      margin-bottom: 0.32rem;
+      i {
+        flex: 1;
+        max-width: 1rem;
+        height: 0.3rem;
+        background: url(./imgs/icon-left@2x.png) no-repeat;
+        background-size: 100% 100%;
+        &:last-child {
+          background: url(./imgs/icon-right@2x.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .txt {
+        padding: 0 0.3rem;
+      }
+    }
+    .standard-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 0.44rem;
+      color: rgb(164, 115, 31);
+      margin-bottom: 0.4rem;
+      .standard-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.3rem;
+        max-width: 3.08rem;
+        min-width: 3.08rem;
+        height: 2.24rem;
+        background: url(./imgs/IMG_BG_TENGXUN.png) no-repeat;
+        background-size: 100% 100%;
+        .price {
+          font-size: 0.22rem;
+          b {
+            font-size: 0.48rem;
+          }
+        }
+        .name {
+          line-height: 0.62rem;
+          font-size: 0.22rem;
+          background: #fdf5e0;
+          padding: 0 0.2rem;
+        }
+        .btn {
+          width: 1.84rem;
+          height: 0.54rem;
+          line-height: 0.54rem;
+          text-align: center;
+          color: #fff;
+          background: url(./imgs/receive-btn.png) no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+  .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    .msg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 5.52rem;
+      height: 6rem;
+    }
+    .rule {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 5.56rem;
+      height: 6.26rem;
+      line-height: 0.3rem;
+      background: url(./imgs/IMG_BG_HDNR@2x.png) no-repeat;
+      background-size: 100% 100%;
+      .title {
+        font-size: 0.3rem;
+        line-height: 0.5rem;
+        text-align: center;
+      }
+      .txt {
+        padding: 0 0.3rem 0.3rem;
+        height: 4.5rem;
+        line-height: 0.4rem;
+        overflow: scroll;
+      }
+    }
+    .close {
+      position: relative;
+      width: 0.72rem;
+      height: 0.72rem;
+      left: 5.1rem;
+      top: -0.3rem;
+      background: url(./imgs/POP_BTN_CANCEL.png) no-repeat;
+      background-size: 100% 100%;
+    }
+    .msg-box {
+      width: 5.52rem;
+      height: 2.54rem;
+      color: rgb(164, 115, 31);
+
+      &.rule1 {
+        background: url(./imgs/POP_BTN_ADD.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      &.rule2 {
+        .desc {
+          position: relative;
+          bottom: 0.2rem;
+          line-height: 0.4rem;
+          text-align: center;
+        }
+        margin-top: 1rem;
+        background: url(./imgs/POP_BTN_ADD.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      &.rule4 {
+        .btn-group {
+          padding: 0.56rem 0.5rem 0;
+          display: flex;
+          justify-content: space-between;
+        }
+        .desc {
+          text-align: center;
+        }
+        .cancel,
+        .confirm {
+          width: 1.8rem;
+          height: 0.62rem;
+        }
+        .cancel {
+          background: url(./imgs/POP_BOTN_CANCEL.png) no-repeat;
+          background-size: 100% 100%;
+        }
+        .confirm {
+          background: url(./imgs/queding.png) no-repeat;
+          background-size: 100% 100%;
+        }
+        background: url(./imgs/POP_BTN_ADD.png) no-repeat;
+        background-size: 100% 100%;
+      }
+      .btn {
+        width: 2.18rem;
+        height: 0.62rem;
+        margin: 0.1rem auto 0;
+        background: url(./imgs/POP_BOTN_KNOW.png) no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+.gray-btn {
+  filter: grayscale(90%);
+}
+</style>

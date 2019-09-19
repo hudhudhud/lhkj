@@ -1,0 +1,82 @@
+[
+    {
+        "point": [0,1],
+        "level": 0
+    },
+    {
+        "point": [0,2],
+        "level": 1
+    },
+    {
+        "point": [0,3],
+        "level": 2
+    },
+    {
+        "point": [0,4],
+        "level": 3
+    },
+    {
+        "point": [1,4],
+        "level": 3
+    },
+    {
+        "point": [1,5],
+        "level": 3
+    },
+    {
+        "point": [2,5],
+        "level": 1
+    },
+    {
+        "point": [3,5],
+        "level": 3
+    },
+    {
+        "point": [4,5],
+        "level": 3
+    },
+    {
+        "point": [4,4],
+        "level": 2
+    },
+    {
+        "point": [5,4],
+        "level": 3
+    },
+    {
+        "point": [5,3],
+        "level": 1
+    },
+    {
+        "point": [5,2],
+        "level": 3
+    },
+    {
+        "point": [5,1],
+        "level": 3
+    },
+    {
+        "point": [4,1],
+        "level": 1
+    },
+    {
+        "point": [4,0],
+        "level": 2
+    },
+    {
+        "point": [3,0],
+        "level": 3
+    },
+    {
+        "point": [2,0],
+        "level": 2
+    },
+    {
+        "point": [1,0],
+        "level": 3
+    },
+    {
+        "point": [1,1],
+        "level": 3
+    }
+]

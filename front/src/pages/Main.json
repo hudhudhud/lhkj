@@ -1,0 +1,108 @@
+{
+  "cbb": {
+    "home": "//static.lianhaikeji.com/images/20181019/2633bf16dcb443d99f456b94d936ffb6.png",
+    "homeOn": "//static.lianhaikeji.com/images/20181019/d0516819551e4f91a59da246e9a424ca.png",
+    "mine": "//static.lianhaikeji.com/images/20181019/1681d776decb48c98a10b296de50029d.png",
+    "mineOn": "//static.lianhaikeji.com/images/20181019/16687ec172764e209523e45af912a1c8.png",
+    "service": "//static.lianhaikeji.com/images/20181019/ea2995f608f247eba1103f4bd91a7925.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20181019/bd26348a2d6c4924ae1c109ee56291f5.png",
+    "active": "rgb(9, 182, 242)"
+  },
+  "cbbZJ": {
+    "home": "//static.lianhaikeji.com/images/20190714/a1ae843e6e9a48beaa6e020683b6fb02.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190711/f54177d8f7c5483eb402d0af0a1c1145.png",
+    "mine": "//static.lianhaikeji.com/images/20190711/95f48c50f7754596aa63bc09df915e1e.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190711/3819d9b0d00e453cb685c8172890e8df.png",
+    "service": "//static.lianhaikeji.com/images/20190711/5108e0bf4ed3463ba4a2c9720eab52e3.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190711/554e54da0feb49e39133bc92f56c9deb.png"
+  },
+  "ccbGX": {
+    "home": "//static.lianhaikeji.com/images/20181127/4975cf2e2abe4b268253ed56548af121.png",
+    "homeOn": "//static.lianhaikeji.com/images/20181127/851e6a5aa1b342d0af382a3cc5b8c2de.png",
+    "mine": "//static.lianhaikeji.com/images/20181127/7bb9540f930a4bbbb1522a6266bb96c5.png",
+    "mineOn": "//static.lianhaikeji.com/images/20181127/ecfa276557484d1883b957a855ed0dc8.png",
+    "service": "//static.lianhaikeji.com/images/20181127/aa9beb4f990a4916a8d80f50b9f35993.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20181127/482aa8fe6cee4493a81f2c17255c0e02.png",
+    "active": "rgb(92, 208, 139)"
+  },
+  "bocFJ": {
+    "home": "//static.lianhaikeji.com/images/20181219/e1ca75ab330843eeb9dd73c9fc04a3e1.png",
+    "homeOn": "//static.lianhaikeji.com/images/20181219/115f2da32eec452d8fa3b4bedb7af633.png",
+    "mine": "//static.lianhaikeji.com/images/20181219/3b473aae1efa4573b3e4296c221ed12c.png",
+    "mineOn": "//static.lianhaikeji.com/images/20181219/58682e1451f549228d693f4c89857ffc.png",
+    "service": "//static.lianhaikeji.com/images/20181219/b3ae1e5efb9643369644b3d8f3ac76b0.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20181219/147ece2834404475b15ef7aa0d0d2052.png"
+  },
+  "ccbHN": {
+    "home": "//static.lianhaikeji.com/images/20190327/74e03f78020446eba12703e7b1274f28.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190327/89e7070e0b134b81aabe4144feddbf3e.png",
+    "mine": "//static.lianhaikeji.com/images/20190327/4f406f6a22af42efa59dcd3f04f5177e.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190327/d6dd3e8327c64a64abe90fc1c73905a1.png",
+    "service": "//static.lianhaikeji.com/images/20190327/f059e544c47e401c94aee381ea469907.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190327/1009ebbbceba418da183da782c2325bf.png"
+  },
+  "ccbGD": {
+    "home": "//static.lianhaikeji.com/images/20190404/e38446bdb67444c2adcb9cc28c14cb09.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190404/0f60d94bac0849daa6ec5f4f5f444fa7.png",
+    "mine": "//static.lianhaikeji.com/images/20190404/55383bbae7b045f09deb34e94a680650.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190404/c65dc2cec40d46ebb4a1af164f8802c6.png",
+    "service": "//static.lianhaikeji.com/images/20190404/479327b8dc1e41199bea0e75f567da86.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190404/f59f9206b8c44a93839ef996044d9960.png"
+  },
+  "ycHN": {
+    "home": "//static.lianhaikeji.com/images/20190714/a1ae843e6e9a48beaa6e020683b6fb02.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190428/8f89efed8eb34409a996bf86649fa28e.png",
+    "mine": "//static.lianhaikeji.com/images/20190428/9ef40925507147f88fa1100dd499cdd8.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190425/326baa995f9a435fae62fd306e419e73.png",
+    "service": "//static.lianhaikeji.com/images/20190428/acde49c85aa440fba4e23ab22da6f4ef.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190425/bc4daa593fdd45e9bd99957ffe6d7b7e.png"
+  },
+  "MT": {
+    "home": "//static.lianhaikeji.com/images/20190508/d5fb325e177c47a8b474abbb630ff7dd.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190508/eeb322ad458b408e89455f42fd12b40b.png",
+    "mine": "//static.lianhaikeji.com/images/20190508/55176f222f234a53b39b705e992f91ad.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190508/fab213aec6ee4a67a64d978071647b41.png",
+    "service": "//static.lianhaikeji.com/images/20190508/47959494cc564a3b8f169806309585fd.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190508/5ae9247d860646958039342f78042baf.png"
+  },
+  "ccbCreditGD": {
+    "home": "//static.lianhaikeji.com/images/20190516/49cf9907a7624e3cb2bb96f6c6a03130.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190516/c960e124617049f88703917cf71bfdfc.png",
+    "mine": "//static.lianhaikeji.com/images/20190516/68684984d73641b588b484c46f2b3922.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190516/206d4f5a66b04f578e7c3e704987b0f4.png",
+    "service": "//static.lianhaikeji.com/images/20190516/19377664b9724a4080eb0d745c08eb8a.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190516/3057dcb6f150457cb4c630f2a9faaca9.png"
+  },
+  "ccbSZ": {
+    "home": "//static.lianhaikeji.com/images/20190603/e70f157dd34340d1b14da06411fb400e.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190603/2d6f3fb5871e4b1b89f559c185ee596a.png",
+    "mine": "//static.lianhaikeji.com/images/20190603/758a3add059441259d65999effba7f3c.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190603/a5a26673e11c4566964bcc11b239c87f.png",
+    "service": "//static.lianhaikeji.com/images/20190603/3c1be7f719ec44e891669f8a56868eb5.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190603/069a88c434e643cab14efa6ad089d88c.png"
+  },
+  "HNtp": {
+    "home": "//static.lianhaikeji.com/images/20190702/22a3d3c689fe4b9bb06d89a91ce806bb.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190702/14414219080f4304b0e50eb989338e55.png",
+    "mine": "//static.lianhaikeji.com/images/20190702/e3d14655b9524160b13e19d8eba1d3cd.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190702/8664be101a554c6290b92f2f08ec8789.png",
+    "service": "//static.lianhaikeji.com/images/20190702/63a020e6f3fb4c60879defbb194cfb20.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190702/00b29c716fb74c70954231ac78ca7b89.png"
+  },
+  "ccbJilin": {
+    "home": "//static.lianhaikeji.com/images/20190722/e2c8ae57069e406080a04ad91e7a95b5.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190722/02e50b94d65b49b88f354dca21d7fe52.png",
+    "mine": "//static.lianhaikeji.com/images/20190722/487f1cfc13c748dd93254329e1fd4272.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190722/64c0f70bdf874ea8a499105d3bafa573.png",
+    "service": "//static.lianhaikeji.com/images/20190722/a873e25ed815464fb6d90d71ff287e06.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190722/f9e6173fb4a34cde92a67e993ba2abab.png"
+  },
+  "BJyyb": {
+    "home": "//static.lianhaikeji.com/images/20190723/dd2e0dc0f99d429eb094c9e193dc77d9.png",
+    "homeOn": "//static.lianhaikeji.com/images/20190723/3a4d29b747014e17999f4501cc1925c0.png",
+    "mine": "//static.lianhaikeji.com/images/20190723/f3465b15da464ca19ce7805502986663.png",
+    "mineOn": "//static.lianhaikeji.com/images/20190723/3206433308744ae8be4207c3ebbec3dc.png",
+    "service": "//static.lianhaikeji.com/images/20190723/3544843a931c47c19f1b5d8010143e4a.png",
+    "serviceOn": "//static.lianhaikeji.com/images/20190723/834818a3d4494f59831e117e0b0d6136.png"
+  }
+}

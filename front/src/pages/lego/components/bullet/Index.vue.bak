@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <bullet
+      :act="act"
+      theme="green"
+    ></bullet>
+
+  </div>
+</template>
+<script>
+import bullet from '@/components/bullet';
+
+export default {
+  props: {
+    setting: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    act () {
+      return JSON.parse(this.setting.act);
+    }
+  },
+  components: {
+    bullet
+  }
+};
+</script>
+<style lang="scss" scoped>
+</style>

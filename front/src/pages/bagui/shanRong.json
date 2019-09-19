@@ -1,0 +1,59 @@
+{
+  "all": [
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/0733238480354988a9221adc39ecbc65.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002157440.jhtml",
+      "txt": "全部"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/4ae5fa55efda40a980abab17fd7ec94d.jpg",
+      "link": "http://buy.ccb.com/products/pd_0001086972.jhtml"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/461414fedc934c4a8b5f954c511fd6e2.jpg",
+      "link": "http://buy.ccb.com/products/pd_0000227464.jhtml"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/f7be618412914eb2b6a9188a5e561a10.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002079665.jhtml"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/de29319030564821a22f35e72b7a6b28.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002200021.jhtml"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/70218ed701fb43699881a19f67520883.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002214414.jhtml"
+    }
+  ],
+  "life": [
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/de29319030564821a22f35e72b7a6b28.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002200021.jhtml",
+      "txt": "生活"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/70218ed701fb43699881a19f67520883.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002214414.jhtml"
+    }
+  ],
+  "food": [
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/0733238480354988a9221adc39ecbc65.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002157440.jhtml",
+      "txt": "食品"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/4ae5fa55efda40a980abab17fd7ec94d.jpg",
+      "link": "http://buy.ccb.com/products/pd_0001086972.jhtml"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/461414fedc934c4a8b5f954c511fd6e2.jpg",
+      "link": "http://buy.ccb.com/products/pd_0000227464.jhtml"
+    },
+    {
+      "imgSrc": "//static.lianhaikeji.com/images/20181127/f7be618412914eb2b6a9188a5e561a10.jpg",
+      "link": "http://buy.ccb.com/products/pd_0002079665.jhtml"
+    }
+  ]
+}

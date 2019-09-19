@@ -1,0 +1,37 @@
+[
+  {
+    "text": "首页",
+    "icon": "//static.lianhaikeji.com/images/20190605/2b165fb0a91f40fca7bcaf76e1cec7cf.png",
+    "icon_on": "//static.lianhaikeji.com/images/20190605/e74a80b8e1134e4b8925a0c8feba3777.png",
+    "path": "merchant/fujianlettory/index"
+  },
+  {
+    "text": "我的",
+    "icon": "//static.lianhaikeji.com/images/20190605/e247abe806fb48b18991684dc0309c76.png",
+    "icon_on": "//static.lianhaikeji.com/images/20190605/f5f33e34cd364c3094d4fab6b1c48e80.png",
+    "path": "merchant/index/mine"
+  },
+  {
+    "text": "更多精彩",
+    "icon": "//static.lianhaikeji.com/images/20190605/ef04a137dfb9451d90d6ccefd07f2a47.png",
+    "icon_on": "//static.lianhaikeji.com/images/20190605/55b9b9e26fc44182ae627e9fb19c788f.png",
+    "path": "",
+    "innerTabs": [
+      {
+        "text": "活动一",
+        "icon": "",
+        "icon_on": "",
+        "active": "",
+        "path": "https://www.baidu.com/"
+      },
+      { "text": "活动二", "icon": "", "icon_on": "", "active": "", "path": "" },
+      {
+        "text": "更多",
+        "icon": "",
+        "icon_on": "",
+        "active": "",
+        "path": "merchant/fujianlettory/list"
+      }
+    ]
+  }
+]

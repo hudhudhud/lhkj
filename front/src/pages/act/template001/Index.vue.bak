@@ -1,0 +1,191 @@
+<template>
+  <div class="template">
+    <Back></Back>
+    <img
+      class="banner"
+      :src="banner"
+    >
+    <div class="pannel-list">
+      <div
+        class="pannel"
+        v-for="(product,ind) in productList"
+        :key="'product_'+ind"
+      >
+        <div class="pannel-title">
+          <div class="pannel-title-name">
+            <img :src="product.iconUrl">
+            {{product.proName}}
+          </div>
+          <!-- <div class="pannel-title-link" @click="openProduct(product)">
+            产品介绍
+            <img src="@/assets/template001/imgs/arrow.png" />
+          </div>-->
+        </div>
+        <div class="pannel-content">
+          <div
+            class="pannel-item"
+            v-for="(standard,ind2) in product.standardList"
+            :key="ind+'_standard_'+ind2"
+          >
+            <img
+              class="pannel-img"
+              :src="standard.standardImgUrl"
+            >
+            <div class="pannel-name">{{standard.standardName}}</div>
+            <div class="pannel-price">¥{{standard.currentPrice}}</div>
+            <!-- <div class="pannel-btn" @click="buy(standard)">立减{{(1-0.49584965486).toFixed(2)}}元</div> -->
+            <div
+              class="pannel-btn"
+              @click="buy(standard)"
+            >立减{{(standard.originalPrice-standard.currentPrice).toFixed(2)}}元</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="testBtn"
+      @click="testUrl"
+    ></div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    act: {
+      type: Object,
+      require: true
+    }
+  },
+  data () {
+    return {
+      count: 0,
+      banner:
+        '//static.lianhaikeji.com/images/20180724/d8aac5540bbc4d62a37665bf830da674.png',
+      productList: this.act.productList
+    };
+  },
+  watch: {
+    count (val) {
+      if (val > 5) {
+        window.location.href =
+          'https://hemi.lianhaikeji.com/176f12a97a194d88885eaf11c73438ac/merchant/index/act/554706131?merId=3&isQuit=true';
+      }
+    }
+  },
+  methods: {
+    testUrl () {
+      this.count++;
+    },
+    buy (standard) {
+      this.$router.push(
+        `/${this.$store.state.merchantAppid}/merchant/buy/standard/${
+          standard.id
+        }`
+      );
+    },
+    openProduct (product) {
+      this.$router.push(
+        `/${this.$store.state.merchantAppid}/merchant/buy/product/${product.id}`
+      );
+    }
+  }
+};
+</script>
+
+<style rel="stylesheet/scss" lang="scss" scoped>
+.template {
+  background: #eee;
+  font-size: 0.28rem;
+  .banner {
+    width: 100%;
+  }
+  .pannel-list {
+    padding: 0.05rem 0;
+    .pannel {
+      padding: 0.6rem 0.2rem 0.2rem;
+      box-sizing: border-box;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.1rem;
+      .pannel-title {
+        font-size: 0.4rem;
+        margin-bottom: 0.2rem;
+        .pannel-title-name {
+          color: #cc1b30;
+          font-size: 0.36rem;
+          img {
+            height: 0.4rem;
+            width: 0.4rem;
+            margin-right: 0.25rem;
+            vertical-align: -0.06rem;
+          }
+        }
+        .pannel-title-link {
+          flex: 0 0 auto;
+          color: #666;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          img {
+            height: 0.16rem;
+            margin-left: 0.05rem;
+          }
+        }
+      }
+      .pannel-content {
+        flex: 1 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        .pannel-item {
+          flex: 0 0 50%;
+          border: 1px solid #eee;
+          // border-right: none;
+          box-sizing: border-box;
+          padding: 0.2rem 0;
+          /*     &:last-child {
+            border-right: 1px solid #eee;
+          } */
+          .pannel-img {
+            display: block;
+            margin: 0.1rem auto;
+            width: 80%;
+            margin-bottom: 0;
+          }
+          .pannel-name {
+            line-height: 0.6rem;
+            text-align: center;
+          }
+          .pannel-price {
+            line-height: 0.6rem;
+            text-align: center;
+            color: #d2304d;
+            font-size: 0.4rem;
+            margin-bottom: 0.2rem;
+            // text-decoration: line-through;
+          }
+          .pannel-btn {
+            height: 0.6rem;
+            line-height: 0.6rem;
+            width: 2rem;
+            margin: 0 auto;
+            background: red;
+            background: linear-gradient(#eb4f21, #cc1b30);
+            color: #fff;
+            border-radius: 0.3rem;
+            text-align: center;
+            font-size: 0.32rem;
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+.testBtn {
+  width: 1.2rem;
+  height: 1.2rem;
+  // border: 1px solid;
+}
+</style>

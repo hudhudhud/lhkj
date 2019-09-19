@@ -1,0 +1,15 @@
+[
+  {
+    "text": "充值",
+    "icon": "//static.lianhaikeji.com/images/20190613/b7999f1e86444acf8db976042f170479.png",
+    "icon_on": "//static.lianhaikeji.com/images/20190613/b3036acb8e764810a0e0518d2ee32196.png",
+    "path": "merchant/ZJyidong/index",
+    "theme": "ZJyd"
+  },
+  {
+    "text": "个人中心",
+    "icon": "//static.lianhaikeji.com/images/20190613/2d4c36afb67345b6881480e04f227b23.png",
+    "icon_on": "//static.lianhaikeji.com/images/20190613/a053794072b34a539c8d047dfb27e581.png",
+    "path": "merchant/index/mine"
+  }
+]
