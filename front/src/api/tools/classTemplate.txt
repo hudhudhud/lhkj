@@ -1,0 +1,28 @@
+<% for(var x in properties){ 
+    var prop = properties[x];
+    if(prop.$ref && title.indexOf("ApiResult")<0){
+        var typeName = prop.$ref.replace("#/definitions/","");
+%>import <%- typeName %> from "./<%- typeName %>";
+<%
+    }}
+%>
+/**
+ * <%= description||"作者没有写注释!!!" %>
+ */
+export default class <%= title.replace(/«.*»/g, "") %><% if(title.indexOf("«")>-1){  %><T><% } %> {
+<% for(var x in properties){ 
+    var prop = properties[x];
+    var typeName = types[prop.type]?types[prop.type].type:"any";
+    var defaultValue = types[prop.type]?types[prop.type].default:"null";
+    if(prop.$ref && title.indexOf("ApiResult")>-1){
+        typeName = "T";
+    }else if(prop.$ref){
+        typeName = prop.$ref.replace("#/definitions/","");
+    }
+%>
+    /**
+     * <%= prop.description||"作者没写注释!!" %>
+     */
+    public <%- x %>!: <%- typeName %>;
+<% } %>
+}

@@ -1,0 +1,35 @@
+{
+  "name": "首页",
+  "commonConfig": {
+    "title": "悦享优惠",
+    "background": "#fefefe"
+  },
+  "components": [
+    {
+      "componentName": "HemiBanner",
+      "setting": {
+        "image":
+          "//ccbleshare.oss-cn-hangzhou.aliyuncs.com/leshare/e1945373-2e33-4b20-ab1f-84ad18fee4a3.jpg",
+        "action": {
+          "type": "NONE",
+          "data": "http://baidu.com"
+        }
+      }
+    },
+    {
+      "componentName": "HemiSwipe",
+      "setting": {
+        "pictures": [
+          {
+            "url":
+              "//cocostatic.lianhaikeji.com/20180612/662bdc70-8000-4daa-bbe8-1bb81ab83fd7"
+          },
+          {
+            "url":
+              "//cocostatic.lianhaikeji.com/20180612/662bdc70-8000-4daa-bbe8-1bb81ab83fd7"
+          }
+        ]
+      }
+    }
+  ]
+}

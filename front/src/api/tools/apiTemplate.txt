@@ -1,0 +1,81 @@
+import axios from "@/lib/Request";
+/**
+ * <%- info.title %>
+ * <%- info.description %>
+ */
+export default class <%- moduleName %>Api {
+
+    /**
+     * 替换PathVariable
+     */
+    static replacePathVariable(url, param) {
+        for (const x in param) {
+            if (url.indexOf(`{${x}}`) > -1) {
+                url = url.replace(`{${x}}`, param[x]);
+                delete param[x];
+            }
+        }
+        return url;
+    }
+
+<% for(var path in paths){ 
+    var pathDef = paths[path];
+    for(var method in pathDef){
+        if(method=='options'){
+            continue;
+        }
+        var methodDef = pathDef[method];
+        var responseType = methodDef.responses[200].schema;
+        if(responseType.$ref){
+            responseType = responseType.$ref.replace("#/definitions/","");
+            if(responseType.indexOf("«")>-1){
+                responseType = responseType.replace(/«/g,"<").replace(/»/g,">");
+                if(responseType.indexOf("List")>-1){
+                    //将List改写为数组  ApiResult<List<Bean>>
+                    responseType = responseType.replace(/List<([^>]*)>/,"$1[]");
+                }
+            }
+            if(responseType=="ApiResult"){
+                responseType = "ApiResult<any>";
+            }
+        }else{
+            responseType = "any";
+        }
+
+        var paramsStr = "";
+        var bodyParamsStr = "";
+        if(methodDef.parameters){
+            for(var i=0;i<methodDef.parameters.length;i++){
+                var param = methodDef.parameters[i];
+                if(param.in == "header"){
+                    continue;
+                }
+                if(paramsStr!=""){
+                    paramsStr = paramsStr+", "+param.name+"=''";
+                }else{
+                    paramsStr = param.name;
+                }
+            }
+            if(paramsStr!=""){
+                paramsStr = "param";
+            }
+        }
+%>
+    /**
+     * <%= methodDef.tags.join("") %>
+     * <%- methodDef.summary %>
+     */
+    static async <%- methodDef.operationId %>(<%- paramsStr %>) {
+        <% if(path.indexOf("{")>-1){ %>const url = <%- moduleName %>Api.replacePathVariable("<%- path %>", param);<% }else{ %>const url = "<%- path %>";<% } %>
+        const rs = await axios.<%- method %>(url<%
+            if(paramsStr!="" && method=='post'){
+                %>, param<%
+            }
+        %>);
+        return rs.data;
+    }
+<%  
+    } 
+    } 
+%>
+}

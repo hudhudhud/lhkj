@@ -1,0 +1,10 @@
+{
+    "string": {
+        "type": "string",
+        "default": "\"\""
+    },
+    "integer": {
+        "type": "number",
+        "default": 0
+    }
+}

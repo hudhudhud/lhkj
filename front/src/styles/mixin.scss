@@ -1,0 +1,56 @@
+@mixin border-1px($color) {
+  // 用于伪类的定位
+  position: relative;
+  &:after {
+    //定义一个伪类,将它置于元素的底部.
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid $color;
+    content: ' ';
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+  }
+}
+@mixin bg-image($url) {
+  background-image: url($url+'@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url($url+'@3x.png');
+  }
+}
+@mixin flex($direction, $wrapFlag, $align, $vertaical) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrapFlag;
+  justify-content: $align;
+  align-items: $vertaical;
+}
+
+@mixin after-border($color, $h, $w) {
+  content: ' ';
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: $w;
+  margin: 0 auto;
+  border-bottom: $h solid $color;
+}
+
+@mixin arrow($H, $W, $right, $color, $angle) {
+  content: ' ';
+  position: absolute;
+  right: $right;
+  top: 50%;
+  margin-top: -0.1rem;
+  display: block;
+  height: $H;
+  width: $W;
+  border-right: 1px solid $color;
+  border-bottom: 1px solid $color;
+  transform: rotate($angle);
+}

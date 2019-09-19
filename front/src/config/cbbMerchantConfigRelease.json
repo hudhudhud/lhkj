@@ -1,0 +1,138 @@
+{
+  "swipeImage": [
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20180904/a2238296ae744c8e998924d394abc613.png",
+      "link": ""
+    },
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20180904/22d779a817434d16b9d15ff654de7d3d.png",
+      "link": "https://hemi.lianhaikeji.com/a34b49sadasdghgc5d4a2c3d0f0asdscb/merchant/act/42"
+    },
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20180904/cbd72a64ecc249708d35be82145fe3f1.png",
+      "link": "https://hemi.lianhaikeji.com/a34b49sadasdghgc5d4a2c3d0f0asdscb/merchant/index/act/43"
+    },
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20180921/5d8542aea918457b8ebea2d5dc8e580d.png",
+      "link": "actArea/zxglSaleIndex"
+    },
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20190110/856aafc0e5f94b0288b9aff8871fe7e3.jpeg",
+      "link": "http://www.oilplatform.cn/open/weixin.json?channelId=ccbbankapp"
+    },
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20181116/2edd401a7fff4cd6ada7fd004362fea9.png",
+      "link": "http://m.haoyuanfl.com/web/#/gift/goods?id=340&VNK=39d7c4da"
+    },
+    {
+      "imgUrl": "//static.lianhaikeji.com/images/20180904/2fb31e04fd7f4a7e81804b0a57e04cbc.png",
+      "link": ""
+    }
+  ],
+  "actHome": [
+    {
+      "groupName": "",
+      "groupIcon": null,
+      "actList": [
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/f597113896f14d44803006838ed884e8.png",
+          "size": "50",
+          "actId": "42"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/e22fb6b4a61d4af6b4c08fe831504619.png",
+          "size": "50",
+          "actId": "43"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/f65d11c5a1944137a919defd2471d209.png",
+          "size": "50",
+          "link": "http://buy.ccb.com/fupin/mTouchPart.jhtml?pageId=00364"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/adacb43742884b4ba02b8a249a197bc6.png",
+          "size": "100",
+          "link": "actIndex?act=44"
+        }
+      ]
+    },
+    {
+      "groupName": "活动专区",
+      "groupIcon": "//static.lianhaikeji.com/images/20180905/b20f1cec671d4928bdfa514a80febfa9.png",
+      "actList": [
+        {
+          "cover": "//static.lianhaikeji.com/images/20190118/2f367706c34c4c1f8d65d97c483710ae.png",
+          "size": "100",
+          "link": "http://m.haoyuanfl.com/web/#/thematic/exchange"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20190110/34ef439bff4f4f00836a63629a3978f9.png",
+          "size": "100",
+          "link": "http://www.oilplatform.cn/open/weixin.json?channelId=ccbbankapp"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180921/9e66e6f90ed8456297d282a197e658bb.png",
+          "size": "50",
+          "link": "actArea/zxglSaleIndex"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/86f1fa7177994107a34ecc7bbad9d9dc.png",
+          "size": "50",
+          "link": "http://www.ccb.com/cn/html1/office/xyk/subject/18/0504bkweb/index.html"
+        }
+      ]
+    },
+    {
+      "groupName": "本地专区",
+      "groupIcon": "//static.lianhaikeji.com/images/20180905/6083758ce7ff468bba6ba0cdee0560c9.png",
+      "actList": [
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/e7d1d1679deb48c4b3fba8ee268a6c58.png",
+          "size": "100",
+          "link": "http://www.ccb.com/cn/html1/office/xyk/subject/18/0504bkweb/index.html"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/3bc564b166bd4cc8b2131a2077fa70f0.png",
+          "size": "50",
+          "link": "http://www.ruguoyouxuan.com/sg/cbc/indexmenu.php"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/5033046fc51447e5a9494bd9c1f0fab4.png",
+          "size": "50",
+          "link": "http://hfb.youoil.cn/webapp/hfb/ccbbank.htm"
+        }
+      ]
+    },
+    {
+      "groupName": "特卖专区",
+      "groupIcon": "//static.lianhaikeji.com/images/20180905/ff2c0bac2be049b6bb5533d3af75b801.png",
+      "actList": [
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/20de1190ffc545ada87e7f87faac03c0.png",
+          "size": "100",
+          "actId": "46"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/a3e222664ad549ce83dea120944059a8.png",
+          "size": "33",
+          "link": "https://hemi.lianhaikeji.com/a34b49sadasdghgc5d4a2c3d0f0asdscb/merchant/index/cbbBuy001/standard/133"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/55f58a2cf9da43c5a91d7da132775ada.png",
+          "size": "33",
+          "link": "https://hemi.lianhaikeji.com/a34b49sadasdghgc5d4a2c3d0f0asdscb/merchant/index/cbbBuy001/standard/134"
+        },
+        {
+          "cover": "//static.lianhaikeji.com/images/20180905/96a2f2af8eb1454183c92d2ff4900eb8.png",
+          "size": "33",
+          "link": "https://hemi.lianhaikeji.com/a34b49sadasdghgc5d4a2c3d0f0asdscb/merchant/index/cbbBuy001/standard/135"
+        }
+      ]
+    }
+  ],
+  "tabbar": [
+    {
+      "tabIcon": null
+    }
+  ]
+}
