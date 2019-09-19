@@ -1,0 +1,10 @@
+<% for(var x in modules){ 
+%>import _<%- x %>Api from "./apis/<%- x %>Api";
+<% } %>
+<% for(var x in modules){ 
+%>export const <%- x %>Api = _<%- x %>Api;
+<% } %>
+export default {
+    <% for(var x in modules){ 
+    %> <%- x %>Api,<% } %>
+}
