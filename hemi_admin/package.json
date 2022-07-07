@@ -17,7 +17,7 @@
     "element-ui": "^2.3.4",
     "html2canvas": "^1.0.0-rc.3",
     "jquery.qrcode": "^1.0.3",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "nprogress": "^0.2.0",
     "qrcodejs2": "0.0.2",
     "screenfull": "^3.3.2",
